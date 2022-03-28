@@ -1,0 +1,25 @@
+{
+  "demo2App": {
+    "persona": {
+      "home": {
+        "title": "Personas",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Kreirati Persona",
+        "createOrEditLabel": "Kreirati ili urediti Persona",
+        "notFound": "Nije nađeno Personas"
+      },
+      "created": "Kreiran je Persona sa identifikatorom {{ param }}",
+      "updated": "Ažuriran je Persona sa identifikatorom {{ param }}",
+      "deleted": "Obrisan je Persona sa identifikatorom {{ param }}",
+      "delete": {
+        "question": "Da li ste sigurni da želite obrisati Persona {{ id }}?"
+      },
+      "detail": {
+        "title": "Persona"
+      },
+      "id": "ID",
+      "nombre": "Nombre",
+      "apellido": "Apellido"
+    }
+  }
+}

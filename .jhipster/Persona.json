@@ -1,0 +1,25 @@
+{
+  "applications": ["demo2"],
+  "changelogDate": "20220315202851",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "persona",
+  "fields": [
+    {
+      "fieldName": "nombre",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "apellido",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Persona",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

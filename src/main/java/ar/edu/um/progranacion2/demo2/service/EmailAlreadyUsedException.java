@@ -1,0 +1,10 @@
+package ar.edu.um.progranacion2.demo2.service;
+
+public class EmailAlreadyUsedException extends RuntimeException {
+
+    private static final long serialVersionUID = 1L;
+
+    public EmailAlreadyUsedException() {
+        super("Email is already in use!");
+    }
+}

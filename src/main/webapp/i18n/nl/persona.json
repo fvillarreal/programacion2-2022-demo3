@@ -1,0 +1,25 @@
+{
+  "demo2App": {
+    "persona": {
+      "home": {
+        "title": "Personas",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Maak een nieuwe Persona",
+        "createOrEditLabel": "Maak of wijzig een Persona",
+        "notFound": "No Personas found"
+      },
+      "created": "A new Persona is created with identifier {{ param }}",
+      "updated": "A Persona is updated with identifier {{ param }}",
+      "deleted": "A Persona is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Bent u zeker dat u Persona {{ id }} wilt verwijderen?"
+      },
+      "detail": {
+        "title": "Persona"
+      },
+      "id": "ID",
+      "nombre": "Nombre",
+      "apellido": "Apellido"
+    }
+  }
+}
