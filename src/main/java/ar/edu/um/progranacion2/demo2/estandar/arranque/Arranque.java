@@ -18,13 +18,13 @@ public class Arranque {
         this.abrirNegocio();
         Cliente cli1 = new Cliente("Juan");
         Cliente cli2 = new Cliente("Ana");
+        this.negocio.vender(cli1,"BTC");
         this.negocio.vender(cli1);
         this.negocio.vender(cli2);
         this.negocio.vender(cli1);
         this.negocio.vender(cli2);
         this.negocio.vender(cli2,"tarjeta");
         this.negocio.vender(cli2,"tarjeta");
-        this.negocio.vender(cli1,"efectivo");
         this.negocio.vender(cli1,"efectivo");
     }
 

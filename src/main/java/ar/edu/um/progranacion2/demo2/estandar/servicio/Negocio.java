@@ -23,8 +23,10 @@ public class Negocio {
         this.cobro = new Cobro();
         Tarjeta visa = new Tarjeta("VISA","tarjeta");
         Efectivo efectivo = new Efectivo("efectivo");
+        Bitcoin bitcoin = new Bitcoin("BTC");
         this.cobro.agregarTipoPago(visa);
         this.cobro.agregarTipoPago(efectivo);
+        this.cobro.agregarTipoPago(bitcoin);
     }
 
     public void agregarEmpleado(Empleado e) {
