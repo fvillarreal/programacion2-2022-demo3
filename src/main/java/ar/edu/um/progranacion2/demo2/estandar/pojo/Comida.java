@@ -12,4 +12,5 @@ import lombok.ToString;
 public class Comida {
     protected String comida;
     protected String descripcion;
+    protected Double precio;
 }

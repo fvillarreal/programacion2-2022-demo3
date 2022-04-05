@@ -22,16 +22,20 @@ public class Arranque {
         this.negocio.vender(cli2);
         this.negocio.vender(cli1);
         this.negocio.vender(cli2);
+        this.negocio.vender(cli2,"tarjeta");
+        this.negocio.vender(cli2,"tarjeta");
+        this.negocio.vender(cli1,"efectivo");
+        this.negocio.vender(cli1,"efectivo");
     }
 
     public void abrirNegocio() {
         Empleado em1 = new Empleado("Fernando", "Villarreal");
         Empleado em2 = new Empleado("Daniel", "Quinteros");
-        Comida menu1 = new Comida("Menu1","Pancho");
-        Comida menu2 = new Comida("Menu2","Lomo");
-        Comida menu3 = new Comida("Menu3","Papas");
-        Comida menu4 = new Comida("Menu4","Pizza");
-        Comida menu5 = new Comida("Menu5","Helado");
+        Comida menu1 = new Comida("Menu1","Pancho", 700D);
+        Comida menu2 = new Comida("Menu2","Lomo", 1200D);
+        Comida menu3 = new Comida("Menu3","Papas", 400D);
+        Comida menu4 = new Comida("Menu4","Pizza", 750D);
+        Comida menu5 = new Comida("Menu5","Helado", 350D);
         this.negocio = new Negocio();
         this.negocio.agregarEmpleado(em1);
         this.negocio.agregarEmpleado(em2);
