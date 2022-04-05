@@ -57,9 +57,17 @@ public class Negocio {
         Comida com = this.obtenerComidaRandom();
         System.out.println("El empleado que atiende es: "+em.toString());
         System.out.println("La opcion seleccionada de comida del menu es: "+com.toString());
-        this.cobro.cobrar(com.getPrecio());
-        System.out.println("La comida ha sido entregada");
-        System.out.println(String.format("El cliente %s se ha retirado del local", c));
+        try {
+            com.descontarStock();
+            this.cobro.cobrar(com.getPrecio());
+            System.out.println("La comida ha sido entregada");
+            System.out.println(String.format("El cliente %s se ha retirado del local", c));
+        }
+        catch (NoMasComidaException n) {
+            System.out.println("La comida pedida se ha terminado");
+            System.out.println(String.format("El cliente %s se ha retirado TRISTE del local", c));
+        }
+
         System.out.println("--------------------------------------------------------------------------------");
     }
 
@@ -73,5 +81,12 @@ public class Negocio {
         System.out.println("La comida ha sido entregada");
         System.out.println(String.format("El cliente %s se ha retirado del local", c));
         System.out.println("--------------------------------------------------------------------------------");
+    }
+
+    public void mostrarStock() {
+        for(Comida comida: this.menu){
+            System.out.println(String.format("De %s [%s] queda: %s",
+                comida.getComida(), comida.getDescripcion(), comida.getStock()));
+        }
     }
 }

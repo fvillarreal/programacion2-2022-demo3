@@ -26,16 +26,33 @@ public class Arranque {
         this.negocio.vender(cli2,"tarjeta");
         this.negocio.vender(cli1,"efectivo");
         this.negocio.vender(cli1,"efectivo");
+        this.negocio.vender(cli1);
+        this.negocio.vender(cli2);
+        this.negocio.vender(cli1);
+        this.negocio.vender(cli2);
+        this.negocio.vender(cli1);
+        this.negocio.vender(cli2);
+        this.negocio.vender(cli1);
+        this.negocio.vender(cli2);
+        this.negocio.vender(cli1);
+        this.negocio.vender(cli2);
+        this.negocio.vender(cli1);
+        this.negocio.vender(cli2);
+        this.negocio.vender(cli1);
+        this.negocio.vender(cli2);
+        this.negocio.vender(cli1);
+        this.negocio.vender(cli2);
+        this.negocio.mostrarStock();
     }
 
     public void abrirNegocio() {
         Empleado em1 = new Empleado("Fernando", "Villarreal");
         Empleado em2 = new Empleado("Daniel", "Quinteros");
-        Comida menu1 = new Comida("Menu1","Pancho", 700D);
-        Comida menu2 = new Comida("Menu2","Lomo", 1200D);
-        Comida menu3 = new Comida("Menu3","Papas", 400D);
-        Comida menu4 = new Comida("Menu4","Pizza", 750D);
-        Comida menu5 = new Comida("Menu5","Helado", 350D);
+        Comida menu1 = new Comida("Menu1","Pancho", 700D,3);
+        Comida menu2 = new Comida("Menu2","Lomo", 1200D,3);
+        Comida menu3 = new Comida("Menu3","Papas", 400D,3);
+        Comida menu4 = new Comida("Menu4","Pizza", 750D,3);
+        Comida menu5 = new Comida("Menu5","Helado", 350D,3);
         this.negocio = new Negocio();
         this.negocio.agregarEmpleado(em1);
         this.negocio.agregarEmpleado(em2);
