@@ -51,7 +51,7 @@ public class Negocio {
         return c;
     }
 
-    public void vender(Cliente c) {
+    public boolean vender(Cliente c) {
         System.out.println("Vamos a atender al cliente: "+c.toString());
         Empleado em = this.obtenerEmpleadoRandom();
         Comida com = this.obtenerComidaRandom();
@@ -62,13 +62,15 @@ public class Negocio {
             this.cobro.cobrar(com.getPrecio());
             System.out.println("La comida ha sido entregada");
             System.out.println(String.format("El cliente %s se ha retirado del local", c));
+            System.out.println("--------------------------------------------------------------------------------");
+            return true;
         }
         catch (NoMasComidaException n) {
             System.out.println("La comida pedida se ha terminado");
             System.out.println(String.format("El cliente %s se ha retirado TRISTE del local", c));
+            System.out.println("--------------------------------------------------------------------------------");
+            return false;
         }
-
-        System.out.println("--------------------------------------------------------------------------------");
     }
 
     public void vender(Cliente c, String mPago) {
