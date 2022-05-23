@@ -122,4 +122,23 @@ jhipster:
 # https://www.jhipster.tech/common-application-properties/
 # ===================================================================
 
-# application:
+#application:
+
+params:
+  #fechaFormato: 'dd/MM/YYYY hh:mm:ss'
+  fechaFormato: 'dd/MM/YYYY ---- hh:mm:ss'
+  multiple: valor1,valor2
+  objeto:
+    nombre: Fernando
+    apellido: Villarreal
+
+params2:
+  persona:
+    nombre: Fernando
+    apellido: Villarreal
+  personas:
+    - nombre: Fernando
+      apellido: Villarreal
+    - nombre: Pepe
+      apellido: Hongo
+  url: http://pepe.com
