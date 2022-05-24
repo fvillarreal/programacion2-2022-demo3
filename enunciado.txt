@@ -1,0 +1,17 @@
+- Mover la creación de empleados a una clase configuración.
+
+- Mover la creación de menús a una clase configuración.
+
+- Mover la creación de TipoPago a una clase configuración.
+
+- Modificar la función arranque dentro de la clase ArranqueSpringBoot y mover la parte de abrir negocio al servicio NegocioService
+
+- Convertir los System.out.println en logs del sistema
+
+- Crear un endopoint que permita listar los menús disponibles.
+
+- Modificar el NegocioService para registar las ventas realizadas. Se debe registrar el cliente, el menú seleccionado, y la fecha de venta.
+
+- Crear un endpoint que permita listar las ventas históricas.
+
+- Crear un endpoint que permita ver el stock de menús.

@@ -11,12 +11,14 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class Comida {
+    protected Long id;
     protected String comida;
     protected String descripcion;
     protected Double precio;
     protected Integer stock;
 
-    public Comida(String comida, String descripcion, Double precio, Integer stock) throws StockInicialException{
+    public Comida(Long id, String comida, String descripcion, Double precio, Integer stock) throws StockInicialException{
+        this.id = id;
         this.comida = comida;
         this.descripcion = descripcion;
         this.precio = precio;

@@ -11,4 +11,5 @@ import lombok.ToString;
 @ToString
 public class Cliente {
     protected String nombre;
+    protected String apellido;
 }

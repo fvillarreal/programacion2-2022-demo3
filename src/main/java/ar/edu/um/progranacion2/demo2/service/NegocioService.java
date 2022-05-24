@@ -1,21 +1,28 @@
-package ar.edu.um.progranacion2.demo2.estandar.servicio;
+package ar.edu.um.progranacion2.demo2.service;
+
 
 import ar.edu.um.progranacion2.demo2.estandar.pojo.Cliente;
 import ar.edu.um.progranacion2.demo2.estandar.pojo.Comida;
 import ar.edu.um.progranacion2.demo2.estandar.pojo.Empleado;
+import ar.edu.um.progranacion2.demo2.estandar.servicio.*;
 import lombok.Data;
+import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 @Data
-public class Negocio {
+@Service
+public class NegocioService {
     protected List<Empleado> empleados;
     protected List<Comida> menu;
     protected SistemaPago sistemaPago;
 
-    public Negocio() {
+
+    @PostConstruct
+    protected void constructor() {
         System.out.println("Arrancando negocio");
         this.empleados=new ArrayList<>();
         this.menu=new ArrayList<>();
@@ -25,6 +32,7 @@ public class Negocio {
         this.sistemaPago.agregarTipoPago(visa);
         this.sistemaPago.agregarTipoPago(efectivo);
     }
+
 
     public void agregarEmpleado(Empleado e) {
         this.empleados.add(e);
@@ -50,38 +58,40 @@ public class Negocio {
         return c;
     }
 
-    public boolean vender(Cliente c) {
-        System.out.println("Vamos a atender al cliente: "+c.toString());
+    public boolean vender(Cliente cliente) {
+        System.out.println("Vamos a atender al cliente: "+cliente.toString());
         Empleado em = this.obtenerEmpleadoRandom();
         Comida com = this.obtenerComidaRandom();
         System.out.println("El empleado que atiende es: "+em.toString());
         System.out.println("La opcion seleccionada de comida del menu es: "+com.toString());
+        return this.venderInterno(com, cliente, null);
+    }
+
+    public boolean vender(Cliente cliente, String mPago) {
+        System.out.println("Vamos a atender al cliente: "+cliente.toString());
+        Empleado em = this.obtenerEmpleadoRandom();
+        Comida com = this.obtenerComidaRandom();
+        System.out.println("El empleado que atiende es: "+em.toString());
+        System.out.println("La opcion seleccionada de comida del menu es: "+com.toString());
+        return this.venderInterno(com, cliente, mPago);
+
+    }
+
+    protected boolean venderInterno(Comida comida, Cliente cliente, String mPago) {
         try {
-            com.descontarStock();
-            this.sistemaPago.cobrar(com.getPrecio());
+            comida.descontarStock();
+            this.sistemaPago.cobrar(comida.getPrecio(), mPago);
             System.out.println("La comida ha sido entregada");
-            System.out.println(String.format("El cliente %s se ha retirado del local", c));
+            System.out.println(String.format("El cliente %s se ha retirado del local", cliente));
             System.out.println("--------------------------------------------------------------------------------");
             return true;
         }
         catch (NoMasComidaException n) {
             System.out.println("La comida pedida se ha terminado");
-            System.out.println(String.format("El cliente %s se ha retirado TRISTE del local", c));
+            System.out.println(String.format("El cliente %s se ha retirado TRISTE del local", cliente));
             System.out.println("--------------------------------------------------------------------------------");
             return false;
         }
-    }
-
-    public void vender(Cliente c, String mPago) {
-        System.out.println("Vamos a atender al cliente: "+c.toString());
-        Empleado em = this.obtenerEmpleadoRandom();
-        Comida com = this.obtenerComidaRandom();
-        System.out.println("El empleado que atiende es: "+em.toString());
-        System.out.println("La opcion seleccionada de comida del menu es: "+com.toString());
-        this.sistemaPago.cobrar(com.getPrecio(), mPago);
-        System.out.println("La comida ha sido entregada");
-        System.out.println(String.format("El cliente %s se ha retirado del local", c));
-        System.out.println("--------------------------------------------------------------------------------");
     }
 
     public void mostrarStock() {

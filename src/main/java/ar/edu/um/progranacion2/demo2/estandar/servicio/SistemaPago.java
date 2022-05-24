@@ -1,24 +1,18 @@
 package ar.edu.um.progranacion2.demo2.estandar.servicio;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-@Data
-@AllArgsConstructor
-public class MedioPago {
+public class SistemaPago {
     List<TipoPago> mediosDePago;
 
-    public MedioPago() {
-        this.mediosDePago = new ArrayList<>();
-    }
-
-    public void agregarMedioDePago(TipoPago tipo) {
+    public void agregarTipoPago(TipoPago tipo) {
+        if(this.mediosDePago == null) {
+            this.mediosDePago = new ArrayList<>();
+        }
         this.mediosDePago.add(tipo);
     }
 
@@ -45,7 +39,13 @@ public class MedioPago {
     }
 
     public void cobrar(Double monto, String mPago) {
-        TipoPago tipoPago = this.obtenerTipoPagoPorNombre(mPago);
+        TipoPago tipoPago;
+        if(mPago==null) {
+            tipoPago = this.obtenerTipoPagoRandom();
+        }
+        else {
+            tipoPago = this.obtenerTipoPagoPorNombre(mPago);
+        }
         this.cobrarInterno(monto, tipoPago);
     }
 
@@ -55,4 +55,5 @@ public class MedioPago {
         tipoPago.cobrar(monto);
         tipoPago.imprimirTicket();
     }
+
 }
