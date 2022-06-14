@@ -1,0 +1,26 @@
+{
+  "demo2App": {
+    "jVenta": {
+      "home": {
+        "title": "J Ventas",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo J Venta",
+        "createOrEditLabel": "Crear o editar J Venta",
+        "notFound": "Ningún J Ventas encontrado"
+      },
+      "created": "Un nuevo J Venta ha sido creado con el identificador {{ param }}",
+      "updated": "Un J Venta ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un J Venta ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar J Venta {{ id }}?"
+      },
+      "detail": {
+        "title": "J Venta"
+      },
+      "id": "ID",
+      "fecha": "Fecha",
+      "precioVenta": "Precio Venta",
+      "empleado": "Empleado"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "changelogDate": "20220607200708",
+  "dto": "no",
+  "fields": [
+    {
+      "fieldName": "nombre",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "apellido",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "puesto",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "name": "JEmpleado",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "jVenta",
+      "otherEntityRelationshipName": "empleado",
+      "relationshipName": "venta",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

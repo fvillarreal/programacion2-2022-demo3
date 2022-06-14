@@ -8,6 +8,8 @@
       "entities": {
         "main": "Entiteiten",
         "persona": "Persona",
+        "jEmpleado": "J Empleado",
+        "jVenta": "J Venta",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

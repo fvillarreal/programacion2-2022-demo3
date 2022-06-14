@@ -1,0 +1,27 @@
+{
+  "demo2App": {
+    "jEmpleado": {
+      "home": {
+        "title": "J Empleados",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Kreirati J Empleado",
+        "createOrEditLabel": "Kreirati ili urediti J Empleado",
+        "notFound": "Nije nađeno J Empleados"
+      },
+      "created": "Kreiran je J Empleado sa identifikatorom {{ param }}",
+      "updated": "Ažuriran je J Empleado sa identifikatorom {{ param }}",
+      "deleted": "Obrisan je J Empleado sa identifikatorom {{ param }}",
+      "delete": {
+        "question": "Da li ste sigurni da želite obrisati J Empleado {{ id }}?"
+      },
+      "detail": {
+        "title": "J Empleado"
+      },
+      "id": "ID",
+      "nombre": "Nombre",
+      "apellido": "Apellido",
+      "puesto": "Puesto",
+      "venta": "Venta"
+    }
+  }
+}

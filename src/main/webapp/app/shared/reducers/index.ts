@@ -13,6 +13,10 @@ import settings from 'app/modules/account/settings/settings.reducer';
 import passwordReset from 'app/modules/account/password-reset/password-reset.reducer';
 // prettier-ignore
 import persona from 'app/entities/persona/persona.reducer';
+// prettier-ignore
+import jEmpleado from 'app/entities/j-empleado/j-empleado.reducer';
+// prettier-ignore
+import jVenta from 'app/entities/j-venta/j-venta.reducer';
 /* jhipster-needle-add-reducer-import - JHipster will add reducer here */
 
 const rootReducer = {
@@ -27,6 +31,8 @@ const rootReducer = {
   password,
   settings,
   persona,
+  jEmpleado,
+  jVenta,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
   loadingBar,
 };

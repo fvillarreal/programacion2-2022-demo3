@@ -1,0 +1,27 @@
+{
+  "demo2App": {
+    "jEmpleado": {
+      "home": {
+        "title": "J Empleados",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new J Empleado",
+        "createOrEditLabel": "Create or edit a J Empleado",
+        "notFound": "No J Empleados found"
+      },
+      "created": "A new J Empleado is created with identifier {{ param }}",
+      "updated": "A J Empleado is updated with identifier {{ param }}",
+      "deleted": "A J Empleado is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete J Empleado {{ id }}?"
+      },
+      "detail": {
+        "title": "J Empleado"
+      },
+      "id": "ID",
+      "nombre": "Nombre",
+      "apellido": "Apellido",
+      "puesto": "Puesto",
+      "venta": "Venta"
+    }
+  }
+}

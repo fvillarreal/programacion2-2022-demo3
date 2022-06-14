@@ -1,0 +1,26 @@
+{
+  "demo2App": {
+    "jVenta": {
+      "home": {
+        "title": "J Ventas",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Kreirati J Venta",
+        "createOrEditLabel": "Kreirati ili urediti J Venta",
+        "notFound": "Nije nađeno J Ventas"
+      },
+      "created": "Kreiran je J Venta sa identifikatorom {{ param }}",
+      "updated": "Ažuriran je J Venta sa identifikatorom {{ param }}",
+      "deleted": "Obrisan je J Venta sa identifikatorom {{ param }}",
+      "delete": {
+        "question": "Da li ste sigurni da želite obrisati J Venta {{ id }}?"
+      },
+      "detail": {
+        "title": "J Venta"
+      },
+      "id": "ID",
+      "fecha": "Fecha",
+      "precioVenta": "Precio Venta",
+      "empleado": "Empleado"
+    }
+  }
+}

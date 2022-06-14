@@ -1,0 +1,26 @@
+{
+  "demo2App": {
+    "jVenta": {
+      "home": {
+        "title": "J Ventas",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new J Venta",
+        "createOrEditLabel": "Create or edit a J Venta",
+        "notFound": "No J Ventas found"
+      },
+      "created": "A new J Venta is created with identifier {{ param }}",
+      "updated": "A J Venta is updated with identifier {{ param }}",
+      "deleted": "A J Venta is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete J Venta {{ id }}?"
+      },
+      "detail": {
+        "title": "J Venta"
+      },
+      "id": "ID",
+      "fecha": "Fecha",
+      "precioVenta": "Precio Venta",
+      "empleado": "Empleado"
+    }
+  }
+}
